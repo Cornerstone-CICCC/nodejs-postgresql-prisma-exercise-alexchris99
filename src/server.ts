@@ -2,7 +2,7 @@
 import express, {Request, Response}  from "express";
 import dotenv, { config } from 'dotenv'
 dotenv.config()
-import producsRouter from "./routes/product.routes";
+import producsRouter from "./routes/products.routes";
 
 // Create server
 const app = express()

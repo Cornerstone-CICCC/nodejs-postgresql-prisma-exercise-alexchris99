@@ -7,13 +7,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const product_routes_1 = __importDefault(require("./routes/product.routes"));
+const products_routes_1 = __importDefault(require("./routes/products.routes"));
 // Create server
 const app = (0, express_1.default)();
 // Middleware
 app.use(express_1.default.json()); // allows json data 
 // Routes
-app.use("/products", product_routes_1.default);
+app.use("/products", products_routes_1.default);
 // Fallback 
 app.use((req, res) => {
     res.status(404).json({ message: 'Invalid Route' });
